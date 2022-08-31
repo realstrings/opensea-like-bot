@@ -57,6 +57,6 @@ def thread():
         except Exception:
             return thread()
 
-for x in range(50):
+for x in range(threads):
     threading.Thread(target=thread).start()
 
