@@ -25,7 +25,6 @@ def like(asset_id,auth,public,session,proxy):
     'Referer':'https://opensea.io/',
     'Accept-Language':'en-GB,en-US;q=0.9,en;q=0.8'
     }
-    kukis={'cf_clearance':'MpJNNe1uXHxiGuSrn1VhyFannAM6QvIFFFNeKBM1n1Q-1643012085-0-150','__cf_bm':'vAFYeRP2AvOiUgbGsRFnUYROI5LjNoGFExYMdhQlUXA-1644323341-0-AchiFuEKHF4posaPu8/N7yNB1K3PijkgLmmcJudGO+AgzIW/3bjAM55OkjraE32awhNpksiX8pC48mKAD6OSuVY=','csrftoken':'AwXeisUHxgY6vkRYS2qOzeBpebLm4kXfutV4XWy2UBbx7Bcw2wpEE7n7oLoZnV2G','amp_ddd6ec':'6901LkE52H7s7VOxAak_6R...1frcku35t.1frcku35t.i3.6.i9'}
     response=session.post('https://api.opensea.io/graphql/',json=data,headers=hedaders,proxies=proxy)
     if '"updateFavorite":true' in response.text:
         return True
